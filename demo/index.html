@@ -16,19 +16,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="../test-element.html">
   </head>
-  <body>
+  <body unresolved>
 
     <p>An example of <code>&lt;test-element&gt;</code>:</p>
 
-    <button>Say Something</button>
-
+    <p>Make words! <button id="saybtn">Say Something</button></p>
+    <p>Make lasers! <button id="laserbtn">Fire lasers</button></p>
+    
     <test-element author='{"name": "Mr. Polymer", "image": "https://camo.githubusercontent.com/1cd115e2ca265d2286e377997bb9500d3def4ab0/687474703a2f2f692e696d6775722e636f6d2f6473464368496b2e706e67"}' fancy>
       <h2>Hello test-element</h2>
     </test-element>
 
     <script>
-      document.querySelector('button').addEventListener('click', function() {
-        alert(document.querySelector('test-element').sayHello('Hallo!'));
+       var testElement = document.querySelector('test-element');
+      
+      document.querySelector('#saybtn').addEventListener('click', function() {
+        alert(testElement.sayHello('Hallo!'));
+      });
+      
+      document.querySelector('#laserbtn').addEventListener('click', function() {
+        testElement.fireLasers();
+      });
+      document.addEventListener("test-element-lasers", function(e) {
+        console.log(e.detail.sound);
       });
     </script>
 
