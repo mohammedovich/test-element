@@ -1,5 +1,0 @@
-{
-	"directory": "bower_components",
-	"proxy": "http://apacproxy.jpmchase.net:8443/", 
-	"https-proxy": "http://apacproxy.jpmchase.net:8443/"
-}
