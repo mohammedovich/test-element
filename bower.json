@@ -1,9 +1,13 @@
 {
   "name": "test-element",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "authors": [
     "Anonymous <anonymous@example.com>"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohammedovich/test-element.git"
+  },
   "description": "Mohammed creating new dummy element",
   "keywords": [
     "web-component",
@@ -15,9 +19,9 @@
   "license": "http://polymer.github.io/LICENSE.txt",
   "homepage": "https://github.com/mohammedovich/test-element/",
   "ignore": [
-    "/.*",
-    "/test/",
-    "/demo/"
+    // "/.*",
+    // "/test/",
+    // "/demo/"
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.0.0"
